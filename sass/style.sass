@@ -10,6 +10,8 @@ html,body
 	font-family: $main
 	font-weight: 500
 
+
+
 //--- Global and generic stuff ---//
 
 .pull-left
@@ -53,7 +55,9 @@ p
 	letter-spacing: .05em
 
 
+
 //--- Utilities ---//
+
 .overlay
 	width: 100%
 	height: 100%
@@ -66,6 +70,7 @@ p
 	pointer-events: none
 .heroimg,.sideimg
 	position: relative
+
 
 
 //--- The meat of this situation ---//
@@ -121,13 +126,15 @@ header
 
 
 
-//--- Menu ---//
+//--- MENU ---//
+
 .fs-menu
 	display: none
 
 
 
 //--- Formatting ---//
+
 .bodywrap
 	width: 100%
 	// margin-top: $nav-height
@@ -178,6 +185,7 @@ header
 
 
 //--- Brewery ---//
+
 .heroimg
 	img
 		width: 100%
@@ -216,3 +224,19 @@ header
 		border-right: 75px solid transparent
 		border-bottom: 35px solid $brand-4
 		margin-left: -75px
+
+
+
+//--- Responsive Time! ---//
+
+@media #{$sdesk-max}
+	p
+		font-size: 1em
+	.bodywrap .fold .heroimg
+		height: 480px
+
+@media #{$sdesk-max}
+	p
+		font-size: 1em
+	.bodywrap .fold .heroimg
+		height: 480px
