@@ -123,7 +123,16 @@ header
 		font-weight: normal
 		&:hover
 			color: $brand-3
-
+	span
+		display: inline-block
+		overflow: hidden
+		&.menutext
+			width: 85px			
+		&.darrow
+			font-size: 60px
+			height: 100%
+			overflow: hidden
+			line-height: 44px
 
 
 //--- MENU ---//
@@ -214,6 +223,8 @@ header
 		font-size: 1.375em
 		margin: 5px 0 0 0
 		color: $brand-3
+		@media #{$phone}
+			font-size: 1em
 	.triangleup
 		position: absolute
 		bottom: 100%
@@ -231,12 +242,40 @@ header
 
 @media #{$sdesk-max}
 	p
-		font-size: 1em
+		font-size: 0.95em
+	.content .desc
+		padding: 50px 0
 	.bodywrap .fold .heroimg
 		height: 480px
 
-@media #{$sdesk-max}
-	p
-		font-size: 1em
-	.bodywrap .fold .heroimg
-		height: 480px
+@media #{$phablet}
+	h1
+		font-size: 3em
+	.bodywrap 
+		.fold .heroimg
+			height: 320px
+		section
+			height: auto
+			.pull-left,.pull-right
+				float: none
+				width: 100%
+			.sideimg
+				height: 320px
+				img
+					width: 120%
+					height: auto
+@media #{$phone}
+	h1
+		font-size: 2.5em
+	h3
+		font-size: 1.5em
+	header nav>ul
+		padding: 0 10px 0 5px
+	.bodywrap 
+		.fold .heroimg
+			height: 210px
+		section
+			.sideimg
+				height: 250px
+	.navlink span.menutext
+		width: 0
