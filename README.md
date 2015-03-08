@@ -26,3 +26,4 @@
 
 * jQuery (well, not yet...)
 * Modernizr (shiv and all that jazz)
+* FontAwesome
