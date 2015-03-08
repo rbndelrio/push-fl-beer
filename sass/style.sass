@@ -71,8 +71,22 @@ p
 .heroimg,.sideimg
 	position: relative
 
-
-
+.img-cover-w
+	width: 120%
+	margin-left: -10%
+	height: auto
+	position: absolute
+	left: 0
+	top: 50%
+	transform: translateY(-50%)
+.img-cover-l
+	position: absolute
+	top: 0
+	left: 50%
+	transform: translateX(-50%)
+	width: auto
+	margin-top: -10%
+	height: 120%
 //--- The meat of this situation ---//
 
 //--- NAVBAR ---//
@@ -165,6 +179,11 @@ header
 			>div
 				width: 100%
 				height: 100%
+				text-align: center
+				img:not(.img-cover-l)
+					width: 120%
+					margin-left: -10%
+					height: auto
 	.fold
 		height: auto
 		.heroimg
@@ -188,6 +207,7 @@ header
 			width: 65%
 			max-width: 720px
 .imgwrap
+	position: relative
 	width: 100%
 	height: 100%
 	overflow: hidden
@@ -199,7 +219,7 @@ header
 
 .heroimg
 	img
-		width: 100%
+		width: 120%
 		height: auto
 .content
 	&.pull-right
@@ -261,11 +281,9 @@ header
 			.pull-left,.pull-right
 				float: none
 				width: 100%
+				// height: 320px
 			.sideimg
 				height: 320px
-				img
-					width: 120%
-					height: auto
 @media #{$phone}
 	h1
 		font-size: 2.5em
