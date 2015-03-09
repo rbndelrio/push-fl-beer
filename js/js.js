@@ -30,4 +30,8 @@ $(document).ready(function () {
 	$('.menu').click(function () {
 		$('header').toggleClass('open collapsed');
 	});
+	$(".current").click(function (event) {
+			event.preventDefault();
+		$('header').toggleClass('open collapsed');
+	});
 });

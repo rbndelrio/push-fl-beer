@@ -183,6 +183,22 @@ header
 		transform: translateY(-50%)
 		width: 500px
 		border-top: 10px solid $brand-secondary
+		a::after
+			pointer-events: none
+			display: inline-block
+			width: 50px
+			text-align: right
+			font-family: FontAwesome
+			font-size: .6em
+			line-height: 0
+			content: "\f054"
+			color: $brand-3
+			opacity: 0
+			transition: .2s opacity
+			position: relative
+			top: -7px
+		a:hover:not(.current)::after
+			opacity: 1
 	.social
 		display: none
 .open
@@ -200,7 +216,8 @@ header
 	transition-delay: .2s
 	.fs-menu
 		visibility: hidden
-
+.current
+	color: $brand-3
 
 
 
