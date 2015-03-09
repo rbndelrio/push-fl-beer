@@ -96,20 +96,22 @@ p
 header
 	width: 100%
 	position: fixed
+	height: $nav-height
 	z-index: $nav
 	top: 0
 	left: 0
+	transition: .4s height $easeInOutQuart //for menu
 	nav
 		text-transform: uppercase
 		position: relative
-		height: $nav-height
+		height: 100%
 		border-bottom: 2px solid $navborder
 		box-sizing: border-box
 		>ul
 			padding: 0 40px
 			position: relative
 			z-index: $nav
-			height: 100%
+			height: $nav-height
 			margin: 0
 			transition: .2s padding
 			>li
@@ -148,20 +150,57 @@ header
 		&.menutext
 			width: 80px
 			transition: .2s width
+			margin-right: -5px
 		&.darrow
 			// font-size: 60px
 			height: 100%
 			overflow: hidden
-			line-height: 53px
+			line-height: 56px
 			width: 45px
 			text-align: center
-
+			padding-left: 3px
+			transition: .3s transform
 
 
 //--- MENU ---//
 
 .fs-menu
-	display: none
+	transition: .4s opacity, .4s visibility
+	transition-delay: 0
+	position: fixed
+	// top: 25%
+	left: 0
+	opacity: 0
+	font-size: 5em
+	font-family: $brand
+	letter-spacing: .01em
+	line-height: 1.05em
+	.links
+		position: fixed
+		top: 50%
+		left: 40px
+		padding: 0
+		transform: translateY(-50%)
+		width: 500px
+		border-top: 10px solid $brand-secondary
+	.social
+		display: none
+.open
+	transition-delay: 0
+	display: block
+	height: 100%
+	.fs-menu
+		transition-delay: .3s
+		opacity: 1
+		visibility: visible
+	i.darrow
+		transform: rotate(180deg)
+
+.collapsed
+	transition-delay: .2s
+	.fs-menu
+		visibility: hidden
+
 
 
 

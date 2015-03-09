@@ -4,6 +4,7 @@ $(document).ready(function () {
 	    yolo,
 	    aspectRatio;
 
+
 	function resizeBg() {
 		$bg.each(function () {
 			yolo = $(this);
@@ -22,9 +23,11 @@ $(document).ready(function () {
 		});
 
 	}
-	resizeBg();
-	$(window).resize(function () {
-		resizeBg();
-	});
 
+
+	resizeBg();
+	$(window).resize(function () {resizeBg();});
+	$('.menu').click(function () {
+		$('header').toggleClass('open collapsed');
+	});
 });
