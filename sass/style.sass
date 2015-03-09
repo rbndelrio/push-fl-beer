@@ -88,9 +88,11 @@ p
 	width: auto
 	margin-top: 0
 	height: 100%
-//--- The meat of this situation ---//
+
+
 
 //--- NAVBAR ---//
+
 header
 	width: 100%
 	position: fixed
@@ -153,6 +155,7 @@ header
 			line-height: 53px
 			width: 45px
 			text-align: center
+
 
 
 //--- MENU ---//
@@ -270,11 +273,16 @@ header
 
 
 //--- Responsive Time! ---//
+
+//Small Desktops
+
 @media #{$ldesk}
 	.overlay
 		background: $overlay2
 		background-image: $overlay-dot
-		// opacity: .1
+
+
+//Small Desktops + Tablets
 
 @media #{$sdesk-max}
 	p
@@ -283,6 +291,9 @@ header
 		padding: 50px 0
 	.bodywrap .fold .heroimg
 		height: 480px
+
+
+//Phablets-n-tablets
 
 @media #{$phablet}
 	h1
@@ -300,6 +311,10 @@ header
 					width: 80%
 			.sideimg
 				height: 320px
+
+
+//Smartphones
+
 @media #{$phone}
 	h1
 		font-size: 2.5em
