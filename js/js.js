@@ -1,8 +1,10 @@
 $(document).ready(function () {
-	var imgContainer = $('.bgcoverize'),
-	    $bg          = $(".bgcoverize > .imgwrap > img"),
-	    yolo         = $bg,
-	    aspectRatio  = yolo.width() / yolo.height();
+	var $bg          = $(".bgcoverize > .imgwrap > img"),
+		imgContainer = $('.bgcoverize'),
+	    yolo,
+	    aspectRatio;
+
+
 
 	function resizeBg() {
 		$bg.each(function () {
@@ -22,18 +24,30 @@ $(document).ready(function () {
 		});
 
 	}
+
+
+
 	resizeBg();
+	$('.beer .subpage').height($(window).height());
+
+
+
 	$(window).resize(function () {
 		resizeBg();
+		$('.beer .subpage').height($(window).height());
 	});
-	// function imageFun(wrapper) {
-	// 	var img = $("img", wrapper);
-	// 	console.log($(wrapper));
-	// }
-	// imageFun();
-	// $(window).resize(function () {
-	// 	$('.imgwrap').each(function () {
-	// 		imageFun(this);
-	// 	});
-	// });
+
+	$('.menu').click(function (event) {
+			event.preventDefault();
+		$('header').toggleClass('open collapsed');
+	});
+
+	$(".current").click(function (event) {
+			event.preventDefault();
+		$('header').toggleClass('open collapsed');
+	});
+
+	$('.nextpage').click(function () {
+		$("html, body").animate({ scrollTop: $(document).height() }, "slow");
+	});
 });
