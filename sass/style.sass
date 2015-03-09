@@ -25,6 +25,8 @@ html,body
 	p
 		color: $brand-3
 a
+	-webkit-tap-highlight-color: rgba(0,0,0,0)
+	-moz-tap-highlight-color: rgba(0,0,0,0)
 	color: $brand-secondary
 	text-decoration: none
 	transition: .2s color
@@ -171,11 +173,11 @@ header
 	// top: 25%
 	left: 0
 	opacity: 0
-	font-size: 5em
 	font-family: $brand
 	letter-spacing: .01em
-	line-height: 1.05em
 	.links
+		font-size: 5em
+		line-height: 1.05em
 		position: fixed
 		top: 50%
 		left: 40px
@@ -200,7 +202,19 @@ header
 		a:hover:not(.current)::after
 			opacity: 1
 	.social
-		display: none
+		display: inline-block
+		position: fixed
+		bottom: 30px
+		font-size: 1.5em
+		letter-spacing: 15px
+		li
+			display: inline
+		li:first-child		//compensation for bad icon
+			margin-right: -5px
+		a
+			color: $brand-4
+		a:hover
+			color: $brand-3
 .open
 	transition-delay: 0
 	display: block

@@ -27,7 +27,8 @@ $(document).ready(function () {
 
 	resizeBg();
 	$(window).resize(function () {resizeBg();});
-	$('.menu').click(function () {
+	$('.menu').click(function (event) {
+			event.preventDefault();
 		$('header').toggleClass('open collapsed');
 	});
 	$(".current").click(function (event) {
