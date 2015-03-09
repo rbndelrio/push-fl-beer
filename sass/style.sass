@@ -376,6 +376,7 @@ header
 
 section.subpage
 	height: 720px
+	min-height: 615px !important
 	width: 100%
 	overflow: hidden
 	background: $dimorange
@@ -401,6 +402,8 @@ section.subpage
 			padding: 25px
 		p
 			padding: 20px
+			max-width: 400px
+			margin: 0 auto
 		br
 			display: block
 			width: 100%
@@ -426,6 +429,8 @@ section.subpage
 			height: 400px
 			h1
 				font-size: 3em
+		@media #{$phablet}
+			width: 100%
 .nextpage
 	position: absolute
 	bottom: 5%
@@ -438,6 +443,8 @@ section.subpage
 	cursor: pointer
 	text-align: center
 	font-size: 30px
+
+
 
 //--- Responsive Time! ---//
 
