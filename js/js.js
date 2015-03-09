@@ -5,6 +5,7 @@ $(document).ready(function () {
 	    aspectRatio;
 
 
+
 	function resizeBg() {
 		$bg.each(function () {
 			yolo = $(this);
@@ -25,14 +26,28 @@ $(document).ready(function () {
 	}
 
 
+
 	resizeBg();
-	$(window).resize(function () {resizeBg();});
+	$('.beer .subpage').height($(window).height());
+
+
+
+	$(window).resize(function () {
+		resizeBg();
+		$('.beer .subpage').height($(window).height());
+	});
+
 	$('.menu').click(function (event) {
 			event.preventDefault();
 		$('header').toggleClass('open collapsed');
 	});
+
 	$(".current").click(function (event) {
 			event.preventDefault();
 		$('header').toggleClass('open collapsed');
+	});
+
+	$('.nextpage').click(function () {
+		$("html, body").animate({ scrollTop: $(document).height() }, "slow");
 	});
 });
