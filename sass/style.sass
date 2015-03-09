@@ -27,6 +27,7 @@ html,body
 a
 	color: $brand-secondary
 	text-decoration: none
+	transition: .2s color
 	&:hover
 		color: $brand-3
 ul
@@ -100,7 +101,7 @@ header
 		text-transform: uppercase
 		position: relative
 		height: $nav-height
-		border: 1px solid gray
+		border-bottom: 2px solid $navborder
 		box-sizing: border-box
 		>ul
 			padding: 0 40px
@@ -125,6 +126,7 @@ header
 	display: block
 	height: 100%
 	box-sizing: border-box
+	overflow: hidden
 	line-height: $nav-height
 	font-size: 1.5em
 	&.menu
