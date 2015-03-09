@@ -71,8 +71,22 @@ p
 .heroimg,.sideimg
 	position: relative
 
-
-
+.img-cover-w
+	width: 100%
+	margin-left: 0
+	height: auto
+	position: absolute
+	left: 0
+	top: 50%
+	transform: translateY(-50%)
+.img-cover-l
+	position: absolute
+	top: 0
+	left: 50%
+	transform: translateX(-50%)
+	width: auto
+	margin-top: 0
+	height: 100%
 //--- The meat of this situation ---//
 
 //--- NAVBAR ---//
@@ -165,6 +179,11 @@ header
 			>div
 				width: 100%
 				height: 100%
+				text-align: center
+				img:not(.img-cover-l)
+					width: 100%
+					margin-left: 0
+					height: auto
 	.fold
 		height: auto
 		.heroimg
@@ -188,6 +207,7 @@ header
 			width: 65%
 			max-width: 720px
 .imgwrap
+	position: relative
 	width: 100%
 	height: 100%
 	overflow: hidden
@@ -216,6 +236,9 @@ header
 	width: 100%
 	height: 345px
 	background: url('../img/beerpattern.jpg') top center repeat-x
+	@media #{$phone}
+		height: 280px
+		background-size: 645px
 .beeroverlay
 	position: relative
 	padding: 45px 0
@@ -237,10 +260,17 @@ header
 		border-right: 75px solid transparent
 		border-bottom: 35px solid $brand-4
 		margin-left: -75px
+		@media #{$phone}
+			bottom: 95%
 
 
 
 //--- Responsive Time! ---//
+@media #{$ldesk}
+	.overlay
+		background: $overlay2
+		background-image: $overlay-dot
+		// opacity: .1
 
 @media #{$sdesk-max}
 	p
@@ -261,11 +291,11 @@ header
 			.pull-left,.pull-right
 				float: none
 				width: 100%
+				// height: 320px
+				.desc
+					width: 80%
 			.sideimg
 				height: 320px
-				img
-					width: 120%
-					height: auto
 @media #{$phone}
 	h1
 		font-size: 2.5em
